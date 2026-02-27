@@ -1,5 +1,10 @@
 
 
+function version(){
+  document.getElementById("CortexVersion").innerHTML = 'Alpha 1.4.1'
+
+}
+
 const cortex_core = ['jstor', 'jstor 2']
 
 const alert_icon = '<img src="./img/icons/alert-triangle.svg" alt="alert" style="width: 8pt;">'
