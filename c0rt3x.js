@@ -250,7 +250,7 @@ function setTitle(){
 }
 
 function setAuthor(){
-  document.getElementById('search').innerHTML = '<input id="searchBox" style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input" type="text" id="search_var" onkeydown="performSearchAuthor()" onkeyup="performSearchAuthor()" placeholder="* title search *">';
+  document.getElementById('search').innerHTML = '<input id="searchBox" style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input" type="text" id="search_var" onkeydown="performSearchAuthor()" onkeyup="performSearchAuthor()" placeholder="* author search *">';
 }
 
 const pre = 'https://'
