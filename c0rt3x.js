@@ -269,7 +269,7 @@ function performSearchTitle() {
 }
 
 function searchTitle(query) {
-  return documents.filter(doc => doc.content.toLowerCase().includes(query));
+  return documents.filter(doc => doc.title.toLowerCase().includes(query));
 }
 
 function displayResults(results) {
