@@ -263,7 +263,7 @@ function search(query) {
 
 function performSearchTitle() {
   const query = document.getElementById('searchBox').value.toLowerCase();
-  const results = search(query);
+  const results = searchTitle(query);
   displayResults(results);
   console.log('title search')
 }
