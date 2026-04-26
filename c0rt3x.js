@@ -254,7 +254,7 @@ function performSearch() {
   const query = document.getElementById('searchBox').value.toLowerCase();
   const results = search(query);
   displayResults(results);
-  console.lot('abstract search')
+  console.log('abstract search')
 }
 
 function search(query) {
@@ -265,7 +265,7 @@ function performSearchTitle() {
   const query = document.getElementById('searchBox').value.toLowerCase();
   const results = search(query);
   displayResults(results);
-  console.lot('title search')
+  console.log('title search')
 }
 
 function searchTitle(query) {
