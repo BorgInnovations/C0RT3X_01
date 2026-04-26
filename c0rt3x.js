@@ -232,7 +232,25 @@ const documents = [
 { id: 1771881448031, title: "Passive exposure of Earth radiation budget experiment components (A0147) - NASA Technical Reports Server (NTRS)", content: "In-flight calibration for the solr and Earth flux channels was examined. Earth Radiation on Budget (ERB) channel components were exposed to the space environment and then retrieved and resubmitted to radiometric calibration after exposure. It is suggested that corrections may be applied to ERB results and information will be obtained to aid in the selection of components for future operational solar and Earth radiation budget experiments. To assure that these high accuracy devices are measuring real variations and are not responding to changes induced by the space environment, it is desirable to test such devices radiometrically after exposure to the best approximation of the orbital environment.|", author: "", ai_score: "low (<15%)", url: "https://ntrs.nasa.gov/citations/19840016616"},
 { id: 1771881448032, title: "Effects of solar radiation on glasses - NASA Technical Reports Server (NTRS)", content: "The effects of solar radiation and space environment on glasses in space flight by exposing glass specimens to the space environment was determined. The occurrence of optical, mechanical, and chemical property changes was analyzed. The property changes of samples receiving differing cumulative solar radiation exposure are compared.|", author: "", ai_score: "low (<15%)", url: "https://ntrs.nasa.gov/citations/19840016617"},
 { id: 1771881448033, title: "Study of factors determining the radiation sensitivity of quartz crystal oscillators (A0189) - NASA Technical Reports Server (NTRS)", content: "The correlation between defect cluster concentrations observed for different grades of quartz examined by transmission electron microscopy (TEM) and the electrical stability of quartz resonators exposed to complex radiation in an orbital LDEF was determined. It is demonstrated that the technique TEM provides a powerful method for studying the effect of radiation on crystalline quartz. Two factors suggest that the observed clusters may be responsible for the radiation-induced frequency drift and acoustic absorption effects associated with irradiated quartz resonators: (1) the clusters are expected to be very effective in modifying the piezoelectric properties of quartz because of the large strain fields associated with them; (2) both phenomena appear to be sensitive to the impurity concentration. It is suggested that TEM can be used to classify grades of quartz according to their suitability for use in radiation-hard resonators. This technique may identify the impurities that are responsible and thereby effect an improvement in the stability of quartz oscillators.|", author: "", ai_score: "low (<15%)", url: "https://ntrs.nasa.gov/citations/19840016618"},
+
+
+
+
+
 ]; 
+
+
+function setAbstract(){
+  document.getElementById('abstractSel').class = 'bbus';
+  document.getElementById('titleSel').class = 'abus';
+  document.getElementById('search').innerHTML = '<input id="searchBox" style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input" type="text" id="search_var" onkeydown="performSearch()" onkeyup="performSearch()" placeholder="* * * search * * *">';
+}
+
+function setTitle(){
+  document.getElementById('abstractSel').class = 'abus';
+  document.getElementById('titleSel').class = 'bbus';
+  document.getElementById('search').innerHTML = '<input id="searchBox" style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input" type="text" id="search_var" onkeydown="performSearchTitle()" onkeyup="performSearchTitle()" placeholder="* * * search * * *">';
+}
 
 const pre = 'https://'
 function performSearch() {
@@ -242,6 +260,16 @@ function performSearch() {
 }
 
 function search(query) {
+  return documents.filter(doc => doc.content.toLowerCase().includes(query));
+}
+
+function performSearchTitle() {
+  const query = document.getElementById('searchBox').value.toLowerCase();
+  const results = search(query);
+  displayResults(results);
+}
+
+function searchTitle(query) {
   return documents.filter(doc => doc.content.toLowerCase().includes(query));
 }
 
