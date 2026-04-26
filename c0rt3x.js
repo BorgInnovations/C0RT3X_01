@@ -1,7 +1,7 @@
 
 
 function version(){
-  document.getElementById("CortexVersion").innerHTML = 'Alpha 1.4.1'
+  document.getElementById("CortexVersion").innerHTML = 'Beta 1.0.0'
 
 }
 
