@@ -249,6 +249,10 @@ function setTitle(){
   document.getElementById('search').innerHTML = '<input id="searchBox" style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input" type="text" id="search_var" onkeydown="performSearchTitle()" onkeyup="performSearchTitle()" placeholder="* title search *">';
 }
 
+function setAuthor(){
+  document.getElementById('search').innerHTML = '<input id="searchBox" style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input" type="text" id="search_var" onkeydown="performSearchAuthor()" onkeyup="performSearchAuthor()" placeholder="* title search *">';
+}
+
 const pre = 'https://'
 function performSearch() {
   const query = document.getElementById('searchBox').value.toLowerCase();
@@ -270,6 +274,17 @@ function performSearchTitle() {
 
 function searchTitle(query) {
   return documents.filter(doc => doc.title.toLowerCase().includes(query));
+}
+
+function performSearchAuthor() {
+  const query = document.getElementById('searchBox').value.toLowerCase();
+  const results = searchAuthor(query);
+  displayResults(results);
+  console.log('title search')
+}
+
+function searchAuthor(query) {
+  return documents.filter(doc => doc.author.toLowerCase().includes(query));
 }
 
 function displayResults(results) {
