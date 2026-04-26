@@ -241,11 +241,11 @@ const documents = [
 
 
 function setAbstract(){
-  document.getElementById('search').innerHTML = '<input id="searchBox" style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input" type="text" id="search_var" onkeydown="performSearch()" onkeyup="performSearch()" placeholder="* * * search * * *">';
+  document.getElementById('search').innerHTML = '<input id="searchBox" style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input" type="text" id="search_var" onkeydown="performSearch()" onkeyup="performSearch()" placeholder="* abstract search *">';
 }
 
 function setTitle(){
-  document.getElementById('search').innerHTML = '<input id="searchBox" style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input" type="text" id="search_var" onkeydown="performSearchTitle()" onkeyup="performSearchTitle()" placeholder="* * * search * * *">';
+  document.getElementById('search').innerHTML = '<input id="searchBox" style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input" type="text" id="search_var" onkeydown="performSearchTitle()" onkeyup="performSearchTitle()" placeholder="* title search *">';
 }
 
 const pre = 'https://'
