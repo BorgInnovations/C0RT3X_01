@@ -241,14 +241,10 @@ const documents = [
 
 
 function setAbstract(){
-  document.getElementById('abstractSel').class = 'bbus';
-  document.getElementById('titleSel').class = 'abus';
   document.getElementById('search').innerHTML = '<input id="searchBox" style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input" type="text" id="search_var" onkeydown="performSearch()" onkeyup="performSearch()" placeholder="* * * search * * *">';
 }
 
 function setTitle(){
-  document.getElementById('abstractSel').class = 'abus';
-  document.getElementById('titleSel').class = 'bbus';
   document.getElementById('search').innerHTML = '<input id="searchBox" style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input" type="text" id="search_var" onkeydown="performSearchTitle()" onkeyup="performSearchTitle()" placeholder="* * * search * * *">';
 }
 
