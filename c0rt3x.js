@@ -242,6 +242,7 @@ const documents = [
 
 function setAbstract(){
   document.getElementById('search').innerHTML = '<input id="searchBox" style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input" type="text" id="search_var" onkeydown="performSearch()" onkeyup="performSearch()" placeholder="* abstract search *">';
+
 }
 
 function setTitle(){
@@ -253,6 +254,7 @@ function performSearch() {
   const query = document.getElementById('searchBox').value.toLowerCase();
   const results = search(query);
   displayResults(results);
+  console.lot('abstract search')
 }
 
 function search(query) {
@@ -263,6 +265,7 @@ function performSearchTitle() {
   const query = document.getElementById('searchBox').value.toLowerCase();
   const results = search(query);
   displayResults(results);
+  console.lot('title search')
 }
 
 function searchTitle(query) {
